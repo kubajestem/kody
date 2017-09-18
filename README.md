@@ -1,1 +1,2 @@
 lalala
+Pierwsza zmiana lokalna
