@@ -13,19 +13,33 @@ int main(int argc, char **argv)
     a = b = c = 0;
     cout << "Podaj 3 liczby: ";
     cin >> a >> b >> c;
-    if (a > b) 
+    if (a > b && a > c) 
     {
-        if (a > c) 
             cout << "najWiększe a=" << a;
-        else
-            cout << "najWiększe c=" << c;
-         } 
-         else if (b > a) 
-        {
-        if (b > c) 
+    } 
+    if (b > a && b > c) 
+    {
             cout << "najWiększe b=" << b;
-        else
+    } 
+    if (c > a && c > b) 
+    {
             cout << "najWiększe c=" << c;
-        } 
+    } 
+    if (a == b && a > c) 
+    {
+            cout << "najWiększe a i b=" << a;
+    } 
+    if (a == c && a > b) 
+    {
+            cout << "najWiększe a i c=" << a;
+    } 
+    if (c == b && c > a) 
+    {
+            cout << "najWiększe b i c=" << b;
+    } 
+    if (c == b && c == a) 
+    {
+            cout << "wszystkie liczby są równe " << a;
+    } 
 	return 0;
 }
