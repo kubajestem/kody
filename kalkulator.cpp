@@ -18,17 +18,21 @@ int main(int argc, char **argv)
     cin >> a >> b;
       
     if (znak == '+')    
-    { cout << "Suma: " << a + b ;
-         }
-    if (znak == '-')    
-    { cout << "Różnica: " << a - b ;
-         }
-    if (znak == '*')    
-    { cout << "Iloczyn: " << a * b ;
-         }
-    if (znak == '/')    
-    { cout << "Iloraz: " << a / b ;
-         }
+    { 
+        cout << "Suma: " << a + b << endl;
+    }
+    else if (znak == '-')    
+    { 
+        cout << "Różnica: " << a - b << endl;
+    }
+    else if (znak == '*')    
+    { 
+        cout << "Iloczyn: " << a * b << endl;
+    }
+    else if (znak == '/')    
+    { 
+        cout << "Iloraz: " << a / b << endl;
+    }
     
     return 0;
 }
