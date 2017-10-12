@@ -3,7 +3,7 @@
  */
 
 
-#include <iostream>
+
 
 using namespace std;
 
@@ -14,8 +14,7 @@ int main(int argc, char **argv)
     cout << "Podaj znak działania: ";
     cin >> znak;
     int a, b;
-    cout << "Podaj dwie liczby: ";
-    cin >> a >> b;
+    cout <<b;
       
     if (znak == '+')    
     { cout << "Suma: " << a + b ;
