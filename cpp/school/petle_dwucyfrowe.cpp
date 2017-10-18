@@ -12,21 +12,19 @@ int main(int argc, char **argv)
 
 {
         int m, n;
-        cout << "Podaj zakres <m, n> <10,99>" << endl;
-        cin >> m >> n;
         
-        while (true) 
-        { if (m/2 == 0)
-            break;
-            
+        while (m<10 || n>99 || m>n) 
+        {
         cout << "Podaj zakres <m, n> <10,99>" << endl;
         cin >> m >> n;
-            
-            
-            
-            
         }
- 
+        while (m<=n)
+        { if (m/2 == 0 && m%3 == 0)
+            {
+                cout<< m << endl;
+            }
+            m++;
+        }
     return 0;
-}
+        }
 
