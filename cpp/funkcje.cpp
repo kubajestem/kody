@@ -50,6 +50,6 @@ int main(int argc, char **a67rgv)
     
     // po nazwie funkcji zawsze wystepują nawiasy , funckjie tworzy sie po to aby moc je wielokrotnie uzyc
     
-	return 0;
+	return 0; // zwracana wartość
 }
 
