@@ -21,7 +21,7 @@ using namespace std;
         cout << "Liczba : " << liczba << endl;
     }
     
-        void zwieksz3(int &liczba, int &krok) // przekazywanie przez wartośc 
+        void zwieksz3(int &liczba, int &krok) // przekazywanie przez refernecję
         // & - operator pobierania adresu, jeżeli w ten sposób 
         //sie przekaze to funkcja nie działa na kopiach tylko na oryginałach
     {
