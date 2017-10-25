@@ -14,6 +14,18 @@ void pobierzDane(int tab[], int ile) {
         cin >> tab[i];
     }
 }
+
+int sumuj(int tab[], int ile) {
+    int i;
+    int suma = 0;
+    cout << "Podane oceny: " << endl;
+        for(i = 0; i < ile; i++) {
+            cout << tab[i] << " ";
+            suma += tab[i];
+    }
+     return suma;
+}
+    
 int main(int argc, char **argv)
 {
     //const int ROZMIAR = 5;
@@ -22,20 +34,15 @@ int main(int argc, char **argv)
     cin >> rozmiar;
     
 	int liczby[rozmiar];
-    int i;
-    int suma = 0;
+
     
     pobierzDane(liczby, rozmiar);
 
-    cout << "Podane oceny: " << endl;
-        for(i = 0; i < rozmiar; i++) {
-            suma += liczby[i];
-            cout << liczby[i] << " " << endl;
-    }
     
     
-    cout << "Suma ocen: " << suma << endl;
-    cout << "Srednia: " << float (suma)/ float (rozmiar) << endl;
+    
+    cout << "Suma ocen: " << sumuj(liczby, rozmiar) << endl;
+    //cout << "Srednia: " << float (suma)/ float (rozmiar) << endl;
 	return 0;
 }
 
