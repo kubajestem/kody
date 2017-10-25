@@ -25,6 +25,10 @@ int sumuj(int tab[], int ile) {
     }
      return suma;
 }
+
+float liczsrednia(int tab[], int ile){
+    return sumuj(tab, ile)/float(ile);
+    }
     
 int main(int argc, char **argv)
 {
@@ -38,11 +42,8 @@ int main(int argc, char **argv)
     
     pobierzDane(liczby, rozmiar);
 
-    
-    
-    
     cout << "Suma ocen: " << sumuj(liczby, rozmiar) << endl;
-    //cout << "Srednia: " << float (suma)/ float (rozmiar) << endl;
+    cout << "Srednia: " << liczsrednia(liczby, rozmiar) << endl;
 	return 0;
 }
 
