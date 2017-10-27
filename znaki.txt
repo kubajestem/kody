@@ -1,0 +1,8 @@
+====== znaki ======
+Created piątek 27 październik 2017
+
+ASCII
+LF - 10 -koniec lini
+CR - 13 - windows - koniec lini
+
+UTF8 ZNAKI MIĘDZYANRODOWE
