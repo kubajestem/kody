@@ -37,6 +37,7 @@ def main(args):
             ileliczb = int(input("Ile liczb chcesz zgadnąć z %s?" % maksliczb))
     except ValueError:
         print('Błędne dane!')
+        exit()
 
     liczby = losuj(ileliczb, maksliczb)
     typy = pobierz_typy(ileliczb)
