@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# ao = 1
-# a1 = a
-# an = a * ... * a (n-czynników) dla N+ - {01}
+# n! = 1 dla {0, 1}
+# n! = 1 * 2 * n dla N+ - {0,1}
 
-def potega_it(podst, wykladnik):
+
+def silnia_it(n):
     """Funkcja oblicza iteracyjne potęgę l. naturalnej"""
     wynik = 1
-    for i in range(wykladnik):
-        wynik = wynik * podst
+    for i in range(2, n + 1):
+        wynik = wynik * i
     return wynik
 
 
@@ -16,14 +16,12 @@ def main(args):
     # pobierz od uzytkownika podstawe i wykładnik
     # i przypisz do odpwoeidznich zmiennyvh
 
-    a = int(input("Podaj podstawę: "))
-    n = int(input("Podaj wykładnik: "))
+    a = int(input("Podaj liczbę: "))
     assert type(a) == int
-    assert type(n) == int
 
-    assert potega_it(100, 0) == 1
-    assert potega_it(100, 1) == 100
-    assert potega_it(2, 3) == 8
+    assert silnia_it(0) == 1
+    assert silnia_it(1) == 1
+    assert silnia_it(7) == 5040
 
     #print("Potęga: ", potega_it(a, n))
 
