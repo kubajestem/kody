@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     cout<< "Podaj druga liczbe: ";
     cin >> b;
     
-    cout<< "NWD = "  <<euklides(a,b);
+    cout << "NWD = "  << euklides(a,b);
     
 	return 0;
 }
