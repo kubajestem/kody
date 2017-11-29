@@ -17,19 +17,19 @@ def fib_iter(n):
     #   print(b)
     #   return b
 
-def fib_iter2(n):
-    a, b = (0, 1)
-
-    while n > 0:
+    print(a)
+    for i in range(2, n):
+        # tmp = b
+        # b = a + b
+        # a = tmp
         a, b = b, a + b
-        print(a, ":", b, "Iloraz:", b / a)
-        n = n - 1
+        print(a, "Wyraz", i + 1, ":", b, "Iloraz:", b/a)
 
     return b
 
 
 def main(args):
-    fib_iter2(10)
+    fib_iter(10)
     return 0
 
 
