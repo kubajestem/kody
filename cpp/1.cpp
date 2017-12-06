@@ -29,8 +29,8 @@ using namespace std;
  
 int main()
 {
-  int n,m;
-  int szerokosc,wysokosc;
+  int n, m;
+  int szerokosc, wysokosc;
  
   cout << "Szerokość =";
   cin >> szerokosc;
@@ -39,19 +39,17 @@ int main()
   cin >> wysokosc;
   cout << endl;
  
-  for (n = 0; n<szerokosc; n++)
+  for (n = 0; n < szerokosc; n++)
      cout << "*" << endl;
  
-  for (m=0;m<wysokosc-2;m++)
+  for (m=0; m < wysokosc-2 ; m++)
     {
        cout << "*";
-          for (n=0;n<szerokosc-2;n++)
+          for (n=0; n < szerokosc-2 ;n++)
           cout << "#";
           cout << "*";
           cout << endl;
     }
-  for (n=0;n<szerokosc;n++)
-     cout << "*" << endl;
- 
+
   return 0;
 }
