@@ -9,6 +9,7 @@ def fib_iter(n):
     F(1) = 1
     F(n) = F<<9n-2) + F>(n-1) dla n>1
     """
+
     a, b = (0, 1)
     if n == 0:
         print(a)
@@ -16,6 +17,13 @@ def fib_iter(n):
     # elif n == 1:
     #   print(b)
     #   return b
+
+
+def fib_rek(n):
+    if n < 2:
+        return 1
+    return fib_rek(n - 1) + fib_rek(n - 2)
+
 
 def fib_iter2(n):
     a, b = (0, 1)
