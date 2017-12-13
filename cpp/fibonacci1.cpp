@@ -1,36 +1,83 @@
-/*
- * fibonacci.cpp
- */
-
-
 #include <iostream>
 
 using namespace std;
 
-int fib_iter(int n)
+void fib_iter(int n);
+void fib_iter2(int n);
+int fib_rek(int n);
+
+int main()
 {
-    if ( n == 0)
-        return 0;
-    else if ( n == 1)
-        return 1;
-    int a = 0;
-    int b = 1;
-    int tmp;
-    cout << a << endl;
-    for (int i = 1 ; i < n; i++) 
-    {   tmp = b;
-        b = a + b;
-        a = tmp;
-    }
-    cout << a << " " << b << " " << b / a << endl;
-    return b;
+   int ile = 0;
+   int wybor = 0;
+   
+   cout<<"Ile liczb fibonacciego chcesz uzyskac: ";
+   cin>>ile;
+   
+   cout<<"Jak wykonac?"<<endl;
+   cout<<"1. for"<<endl;
+   cout<<"2. while"<<endl;
+   cout<<"3. rekurencyjnie"<<endl;
+   cout<<"Wybor: ";
+   cin>>wybor;
+   
+   switch(wybor)
+   {
+       case 1: fib_iter(ile); break;
+       case 2: fib_iter2(ile); break;
+       case 3: 
+        {
+            for(int i=0;i<ile;i++)
+            {
+                cout<<i+1<<" wyraz ciagu to: "<<fib_rek(i)<<endl;
+            }
+        }break;
+   }
+    
+    return 0;
 }
 
-int main(int argc, char **argv)
+//Funckje
+void fib_iter(int n)
 {
-    int n;
-    cout << "Numer wyrazu ciągu: " << endl;
-    cin >> n;
-    printf("Wyraz %d = %d", n, fib_iter(n));    
-    return 0;
+    int a = 0;
+    int b = 1;
+    int tmp = 0;
+    
+    cout<<"Wyraz nr.1: "<<a<<endl;
+    for(int i=1; i<n;i++)
+    {
+        tmp = b;
+        b = a + b;
+        a = tmp;
+        cout<<"Wyraz nr."<<i+1<<": "<<a<<endl;
+        cout<<"Zlota liczba: "<<float(b)/float(a)<<endl;
+    }
+}
+void fib_iter2(int n)
+{
+    int a = 0;
+    int b = 1;
+    int i = 1;
+    int tmp = 0;
+    
+    while(n>0)
+    {
+        tmp = b;
+        b = a + b;
+        a = tmp;
+        
+        cout<<"Wyraz nr."<<i<<": "<<a<<"  ";
+        cout<<"Zlota liczba: "<<float(b)/float(a)<<endl;
+        i++;
+        n--;
+    }
+}
+int fib_rek(int n)
+{
+    if(n<2)
+    {
+        return 1;
+    }
+    else return fib_rek(n-2) + fib_rek(n-1);
 }

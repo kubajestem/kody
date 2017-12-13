@@ -1,38 +1,83 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+#include <iostream>
 
+using namespace std;
 
-def fib_iter(n):
-    """Funkcja wyświetla kolejne wyrazy ciągu Fibonacciego.
-    Funkcja zwraca n-ty wyraz ciągu.
-    F(0) = 0
-    F(1) = 1
-    F(n) = F<<9n-2) + F>(n-1) dla n>1
-    """
-    a, b = (0, 1)
-    if n == 0:
-        print(a)
-        return a
-    # elif n == 1:
-    #   print(b)
-    #   return b
+void fib_iter(int n);
+void fib_iter2(int n);
+int fib_rek(int n);
 
-    print(a)
-    for i in range(2, n):
-        # tmp = b
-        # b = a + b
-        # a = tmp
-        a, b = b, a + b
-        print(a, "Wyraz", i + 1, ":", b, "Iloraz:", b/a)
+int main()
+{
+   int ile = 0;
+   int wybor = 0;
+   
+   cout<<"Ile liczb chcesz uzyskac: ";
+   cin>>ile;
+   
+   cout<<"Jak wykonac?"<<endl;
+   cout<<"1. for"<<endl;
+   cout<<"2. while"<<endl;
+   cout<<"3. rekurencyjnie"<<endl;
+   cout<<"Wybor: ";
+   cin>>wybor;
+   
+   switch(wybor)
+   {
+       case 1: fib_iter(ile); break;
+       case 2: fib_iter2(ile); break;
+       case 3: 
+        {
+            for(int i=0;i<ile;i++)
+            {
+                cout<<i+1<<" wyraz ciagu to: "<<fib_rek(i)<<endl;
+            }
+        }break;
+   }
+    
+    return 0;
+}
 
-    return b
-
-
-def main(args):
-    fib_iter(10)
-    return 0
-
-
-if __name__ == '__main__':
-    import sys
-    sys.exit(main(sys.argv))
+//Funckje
+void fib_iter(int n)
+{
+    int a = 0;
+    int b = 1;
+    int tmp = 0;
+    
+    cout<<"Wyraz nr.1: "<<a<<endl;
+    for(int i=1; i<n;i++)
+    {
+        tmp = b;
+        b = a + b;
+        a = tmp;
+        cout<<"Wyraz nr."<<i+1<<": "<<a<<endl;
+        cout<<"Zlota liczba: "<<float(b)/float(a)<<endl;
+    }
+}
+void fib_iter2(int n)
+{
+    int a = 0;
+    int b = 1;
+    int i = 1;
+    int tmp = 0;
+    
+    while(n>0)
+    {
+        tmp = b;
+        b = a + b;
+        a = tmp;
+        
+        cout<<"Wyraz nr."<<i<<": "<<a<<"  ";
+        cout<<"Zlota liczba: "<<float(b)/float(a)<<endl;
+        i++;
+        n--;
+    }
+}
+int fib_rek(int n)
+{
+    if(n<2)
+    {
+        return 1;
+    }
+    else return fib_rek(n-2) + fib_rek(n-1);
+}
