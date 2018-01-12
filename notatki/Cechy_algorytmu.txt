@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-12T11:12:55+01:00
+
+====== Cechy algorytmu ======
+Created piątek 12 styczeń 2018
+
+Własności
+1. Poprawność
+2. Skończoność
+3. Złożoność
+4. Efektywność
+
+Specyfikacja problemu - określenie celu, danych początkowych !
+Jest możkliwe że algorytm jest częsćiowo poprwany, bo może on być poprawny dsla nieskończenie wielu danych
+
+WNIOSKOWANIE INDUKCYJNE (metoda dowodzenia wniosków), muszę wiedzieć jaka jest silnia dla określonych argumentów
+Wnioskowanie z pojedynczych obserwaci w celu uogólnienia
+DEDUKCYJNE - od ogólnych do szczegółowych
+
+Przy testowaniu argumentów trzeba uważac na błędy logiczne
