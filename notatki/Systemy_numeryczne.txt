@@ -74,6 +74,6 @@ dec2bin 129(10)->10000001(2) -> 128 + 1
 
 
 
-
+0x.................f - szestnastkowy, adres komórki RAM
 
 
