@@ -2,8 +2,8 @@
 
 def main(args):
 	reszty = []
-    liczba = int(input("Podaj liczbe(dec): "))
-    podstawa = int(input("Podaj podstawe(dec): "))
+    liczba = int(input("Podaj liczbe: "))
+    podstawa = int(input("Podaj podstawe: "))
 
     while liczba > 0:
         reszta = liczba % podstawa
