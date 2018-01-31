@@ -12,8 +12,9 @@ def dec2other(liczba10, podstawa):
             reszta = chr(reszta + 55)
         liczba.append(str(reszta))
         liczba10 = int(liczba10 / podstawa)  # uwaga
-    liczba.reverse()
+    liczba.reverse()  # sekswencja.reverse
     return "".join(liczba)
+    # str.join("łącznik") - łączy znaki za pomocą #łącznika
 
 
 def zamiana1():
@@ -32,7 +33,12 @@ def other2dec(liczba, podstawa):
     liczba10 = 0
     potega = len(liczba) - 1
     for cyfra in liczba:
-        liczba10 += cyfra * (podstawa ** potega)
+        if not cyfra.isdigit():  # str.isdigit()- sprawdza czy łańcuch jest
+            # cyfrą
+            liczba10 += ord(cyfra.upper()) - 55 * (podstawa ** potega)
+        else:
+            liczba10 += (cyfra) * (podstawa ** potega)
+        potega -= 1
 
 
 def zamiana2():
@@ -56,3 +62,10 @@ def main(args):
 if __name__ == '__main__':
     import sys
     sys.exit(main(sys.argv))
+
+#  ord(znak) - kod ASCII znaku
+#  chr("kod_ASCII") - zwraca znak o podanym kodzie kodzie
+#  int() - konwersja na liczbę całk.
+#  str() - konwersja na napis
+#  len(sekswencja) - długość sekwencji
+#  str.format - formatowane wyjście

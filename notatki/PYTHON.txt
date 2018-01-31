@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-31T12:07:50+01:00
+
+====== PYTHON ======
+Created środa 31 styczeń 2018
+
+#  ord(znak) - kod ASCII znaku
+#  chr("kod_ASCII") - zwraca znak o podanym kodzie kodzie
+#  int() - konwersja na liczbę całk.
+#  str() - konwersja na napis
+#  len(sekswencja) - długość sekwencji
+#  str.format - formatowane wyjście
+
+#  SEKWENCJE(ang.iterable)
+są to napisy str, ,liczby, slowniki itp.
+
+UNIKOD - wszystkie pisma używane na świecie `		
+UTF8 w standardzie się używa
+
+1 sposobem komporesji jest Kod Morse'a
+
+000111000
+
+Kompresja może byc **stratna i bezstratna** 
+odt - zapisuje tekst w sposob skompresowany, zawiera tekst + metadane
+
+microsoft np. docx,xlls, pptx
+x - sygnał że to jest archiwum
+
+
+Stratna:
+Multimedia jpeg, png, 
+mkv - kontener definiuje że ja moge zawierac w srodku material audioi i video
