@@ -32,3 +32,7 @@ x - sygnał że to jest archiwum
 Stratna:
 Multimedia jpeg, png, 
 mkv - kontener definiuje że ja moge zawierac w srodku material audioi i video
+
+https://docs.google.com/document/d/1zF4ZvPMScGRHI7WaT5vRRNOoOhiRi6otmQK1D--01ws/edit?usp=sharing
+
+Bit rate
