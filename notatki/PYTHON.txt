@@ -33,6 +33,39 @@ Stratna:
 Multimedia jpeg, png, 
 mkv - kontener definiuje że ja moge zawierac w srodku material audioi i video
 
-https://docs.google.com/document/d/1zF4ZvPMScGRHI7WaT5vRRNOoOhiRi6otmQK1D--01ws/edit?usp=sharing
 
-Bit rate
+
+
+
+
+
+
+
+
+
+
+Bit rate - przepływnośc danych
+mp3 - 128 bit/sek
+kb - kilobit
+Mb - megabit
+
+Do 31 do znakji niedrukowalne
+np.
+0 null
+10 Line Feed
+Carriage Retuirn - powrót karetki
+
+Znak konca linii w WINDOWS składa się z LF i CR a w Linuxach tylko z LF
+
+UTFF-8 od 1 do 6 bajtów najczesciej 2 wykorzystuje
+
+***- - -***
+000111000
+
+The rain in Spain falls mainly on the plain
+The rain <3,3>  Sp<8,4> falls m<11,3>ly on t<34,3> pl<15,3>
+<ile znakow trzeba sie cofnac do ostatniegoego wystąpienia, ilosc znakow ktore sie powtarzają>
+
+ile znakow wstecz => 6 bitów
+dł ciągu => 3
+
