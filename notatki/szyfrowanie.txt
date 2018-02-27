@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-27T13:02:41+01:00
+
+====== szyfrowanie ======
+Created wtorek 27 luty 2018
+
+ASYMETRICZNE
+
+protokół HTPPS jest szyfrowany przez protokół SLL zwany TLS
+ta tożsamoiść serwera nazywa się CERTYFIKAT, czyli wystawiany jest przez tzw. uirząd certyfikacji, jest to firma która gwarantuje tożsamośc osoby która ją wydaje
+
+pretty good privacy - szyfrowanie poczty elektronicznej
+
+Szyfrowanie asymetryczne jest nazywane kryptografią klucza publicznego
+	Klucz Publiczny - ciąg który podajemy do publicznej wiadomości, udostępniamy go.
+	Klucz Prywatny - musi być chroniony, najczesciej zapisywany w pliku i zabeczpieczany hasłem.
+
+Jesli te klucze zostaną wygenerowane przez urząd certyfikacji, możemy oużywać na wygenerowanym token'ie
+  
+algorytm RSA 
+
+sa to bardzo dyuże liczby, matematyka liczb pierwszych, nie ma mocy żeby złamać ten szyfr
+
+ssh - przykład stosowania kryptografii - secure shel;l, jest to protokół który stosuje sie w sieciach
