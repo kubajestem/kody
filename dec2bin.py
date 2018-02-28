@@ -17,7 +17,7 @@ def main(args):
     reszty.reverse()
     print(reszty)
 
-
+   
 	return 0
 
 if __name__ == '__main__':
