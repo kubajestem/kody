@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-
+#Lvcb Dvqjta 26/16/3111 Ubsopcsafh
 
 
 def szyfruj(tekst, klucz):
-    """Szyfrowanie tekstu za pomocą szyfru Cezara"""
 
     szyfrogram = ""
     klucz = klucz % 26
@@ -19,7 +17,6 @@ def szyfruj(tekst, klucz):
             ascii -= 26
         szyfrogram += chr(ascii)
     return szyfrogram
-
 
 
 def deszyfruj(szyfrogram, klucz):

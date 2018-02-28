@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#
-#  szyfr_vigenere.py
-#  
-#  
+#JTAZ BTOHRY 15.03.2000 SZQMNAQYDF
 
 def szyfruj(tekst, haslo):
     szyfrogram = []
@@ -25,7 +22,6 @@ def szyfruj(tekst, haslo):
             szyfrogram.append(i)
 
     return "".join(szyfrogram)
-    
 
 
 def deszyfruj(szyfrogram, haslo):
@@ -60,7 +56,7 @@ def main(args):
 
     print("Zaszyfrowane: ", szyfrogram)
     print("Deszyfrowane: ", deszyfruj(szyfrogram, haslo))
-    
+
     return 0
 
 if __name__ == '__main__':

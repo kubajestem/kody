@@ -2,11 +2,10 @@
 # -*- coding: utf-8 -*-
 
 
-
 def szyfruj(tekst, klucz):
     reszta = len(tekst) % klucz
     szyfrogram = ""
-    
+
     if reszta:
         tekst += (klucz - reszta) * "."
 
@@ -16,7 +15,6 @@ def szyfruj(tekst, klucz):
             szyfrogram += tekst[i + j * klucz]
 
     return szyfrogram
-
 
 
 def deszyfruj(szyfrogram, klucz):
