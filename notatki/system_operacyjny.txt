@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-06T12:53:25+01:00
+
+====== system operacyjny ======
+Created wtorek 06 marzec 2018 at Duda's Birthday
+
+otwarty system operacyjny - jest uniwersalny np. linux
+
+AND64 -architektua 64 bitowa
+
+Dawne komputery nie miały systemów operacyjnych
+
+ARM1 - tablety, komórki
+
+opensource 
+
+hardware 
+softwere
+user
+
+jądro - operuje bezpośrednio na sprzęcie, pierwszye się ładuje i wykonuje do pamięci komputera; 
+-procesor
+-pamiec
+-urzadzenia
+
+udostepnia urzydkownikomi  w formie wirtualnej 
+- wirtualizacja urządzen
+
+zarządzanie zasobami sprzętu 
+
+interfejs tesktowy był udostepniany  w formie terminala
+windows upowszechnił interfejs graficzny
+ 
