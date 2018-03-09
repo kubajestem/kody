@@ -1,0 +1,46 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-09T10:59:56+01:00
+
+====== microsoft ======
+Created piątek 09 marzec 2018
+
+dawno dawno temu microsoft był firmą garażową (nie potrafili wymyslec swego własnego systemu)
+MS-DOS - system operacyjny. 
+
+DOs był ładowany z dyskietek A i B
+
+C - dysk twardy
+[[:-przechodzimy]] na dany deysk pe. "z:"
+
+
+cd - change dirtectory
+
+ściezka względna - sposob dotarcia do katalogu z miejsca w którym jestesmy
+
+katalog główny/
+
+bezwgledna -
+
+ .. - poziom do góry
+
+~ katalog głowny usera
+
+W windowsie pliki muszą miec swoje rozszerzenia 
+w linuksie pliki były rozpoznawalne nie por roższerzeniach, ale po nagłówku w nagłówku każdego plimku jest jakaś sygnatura czyli jakis symbol szesnastkowy, w linuksie rozszerzenia nie mudszą być, mogą ale nie muszą, np. programy w linuksie rozszrerzenia nie mają
+
+w windowsie .exe, .com 
+
+każdy plik zapisany na dysku dostawał atrybut a 
+jest atrybut r - jest on tylko do odczytu
+h - hidden file
+s - system file
+
+największym ograniczeniem dosa była ilośc obsługiwanej pamieci max .640 kb max rozmiar programu: 64 kb
+dos wykorzystywał tryb rzeczywsity procesora w związku z tym było możliwe wywoływania przerw np. zeby obsluzyw klawiature
+
+gui - graphic user's interface
+
+microsoft wymyslil pasek tytułi, ze jest menu ze sa podreslone tam litery, ze sa przyciski min, max ze jest orzykład zamkniecia, micorsof twyumyslil ikony 
+MICROSOFT ustandaryzował minterface 
+interface kafelkowy, 
