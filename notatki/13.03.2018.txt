@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-13T12:48:56+01:00
+
+====== 13.03.2018 ======
+Created wtorek 13 marzec 2018
+
+System własnościowy, zamknięty
+
+opensource - otwrate oprogramowanie 
+dystrybucja LInuxa składa się z jądra oraz oprogramowania dodatkowego
+																															**jądro + interface + programy = system**
+
