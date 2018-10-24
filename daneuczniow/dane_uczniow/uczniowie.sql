@@ -20,7 +20,7 @@ CREATE TABLE dane_osobowe (
 DROP TABLE IF EXISTS oceny;
 CREATE TABLE oceny (
     nr_ucznia INTEGER,
-    zach TEXT(10),
+    zach TEXT(15),
     rel DECIMAL DEFAULT NULL,
     pol DECIMAL,
     ang DECIMAL,
