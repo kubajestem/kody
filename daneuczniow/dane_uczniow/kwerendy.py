@@ -5,12 +5,14 @@ import sqlite3
 
 def kwerenda1(cur):
     cur.execute("""
-        SELECT * FROM nazwiska WHERE
+        SELECT przedmiot FROM przedmioty
     """)
     
     #SELECT * FROM nazwiska WHERE nazwisko LIKE 'G%'
     #SELECT * FROM nazwiska WHERE imie1 LIKE 'A_a'
     #SELECT COUNT(*) FROM nazwiska WHERE imie1 LIKE 'A_a'
+    #WHERE miejsce_urodz='Gdańsku'
+    # INNER JOIN oceny ON nazwiska.nr_ucznia = oceny.nr_ucznia
     
     for row in cur.fetchall():
         print(tuple(row))

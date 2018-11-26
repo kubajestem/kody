@@ -23,7 +23,7 @@ def czytaj_dane(plik, separator=","):
     with open(plik, newline='', encoding='utf-8') as plikcsv:
         tresc = csv.reader(plikcsv, delimiter=separator, skipinitialspace=True)
         for rekord in tresc:
-            dane.append(rekord)
+            dane.append(tuple(rekord))
     
     return dane
 
@@ -81,4 +81,4 @@ def main(args):
 
 if __name__ == '__main__':
     import sys
-sys.exit(main(sys.argv))
+    sys.exit(main(sys.argv))

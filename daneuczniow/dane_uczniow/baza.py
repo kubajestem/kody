@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
@@ -37,9 +36,9 @@ def ile_kolumn(cur, tab):
 def main(args):
     # KONFIGURACJA #####################
     baza = 'uczniowie'
-    tabele = ['nazwiska', 'dane_osobowe', 'oceny']
-    roz = '.txt'
-    naglowki = True  # czy pliki źródłowe zawierają nagłówki?
+    tabele = ['uczniowie', 'klasy', 'przedmioty', 'oceny']
+    roz = '.csv'
+    naglowki = False  # czy pliki źródłowe zawierają nagłówki?
     ####################################
     con = sqlite3.connect(baza + '.db')  # połączenie
     cur = con.cursor()  # obiekt kursora
