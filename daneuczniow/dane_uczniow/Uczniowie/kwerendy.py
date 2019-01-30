@@ -1,110 +1,55 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  kwerendy.db
-#  
- 
+#  kwerendy.py
 import sqlite3
 
 def kwerenda1(cur):
     cur.execute("""
-        SELECT AVG(ocena) AS srednia, klasa, przedmiot FROM oceny
+        SELECT klasa, AVG(ocena) AS srednia, przedmiot FROM oceny
         INNER JOIN przedmioty ON przedmioty.id=oceny.id_przedmiot
         INNER JOIN uczniowie ON uczniowie.id=oceny.id_uczen
         INNER JOIN klasy ON uczniowie.id_klasa=klasy.id
         WHERE przedmiot='matematyka'
-        GROUP by klasa
-        ORDER by srednia DESC
+        GROUP BY klasa
+        ORDER BY srednia DESC
     """)
+    # ~SELECT przedmiot, AVG(ocena) AS srednia FROM oceny
+    # ~INNER JOIN przedmioty ON przedmioty.id=oceny.id_przedmiot
+    # ~GROUP BY id_przedmiot ORDER BY srednia DESC
+    # ~SELECT klasa, AVG(ocena) AS srednia FROM oceny
+    # ~INNER JOIN uczniowie ON uczniowie.id=oceny.id_uczen
+    # ~INNER JOIN klasy ON uczniowie.id_klasa=klasy.id
+    # ~GROUP BY klasy.id
+    # ~ORDER BY srednia DESC
+    # WITH srednie AS (SELECT nazwisko, imie, AVG(ocena) AS srednia FROM uczniowie INNER JOIN oceny ON uczniowie.id=oceny.id_uczen GROUP BY uczniowie.id) SELECT COUNT(srednia) FROM srednie WHERE srednia > 3.8
+    # SELECT klasa, COUNT(uczniowie.id) AS ilosc FROM uczniowie INNER JOIN klasy ON uczniowie.id_klasa=klasy.id GROUP BY klasa ORDER BY ilosc DESC
+    # SELECT plec, COUNT(id) FROM uczniowie WHERE egz_mat > (SELECT AVG(egz_mat) FROM uczniowie) GROUP BY plec
+    # SELECT plec, AVG(egz_mat), AVG(egz_hum), AVG(egz_jez) FROM uczniowie GROUP BY plec
+    # WHERE egz_mat > 40 AND egz_hum > 40
+    # SELECT * FROM nazwiska WHERE nazwisko LIKE 'G%'
+    # SELECT * FROM nazwiska WHERE imie1 LIKE 'A__a'
+    # SELECT COUNT(*) FROM nazwiska WHERE imie1 LIKE 'A__a'
+    # SELECT * FROM nazwiska INNER JOIN dane_osobowe ON nazwiska.nr_ucznia = dane_osobowe.nr_ucznia
+    # WHERE miejsce_urodz='GdaĹsku'
+    # WHERE miejsce_urodz <> 'GdaĹsku'
+    # WHERE miesiac>6 and miesiac<9
     
-    # SELECT * FROM nazwiska WHERE nazwisko LIKE 'G*' 
-    wyniki = cur.fetchall()
-    for row in wyniki:
+    for row in cur.fetchall():
         print(tuple(row))
-        
-        
-        # SREDNIA KLASY 
-        # ~SELECT AVG(ocena) AS srednia, klasa FROM uczniowie
-        # ~INNER JOIN oceny ON uczniowie.id=oceny.id_uczen
-        # ~INNER JOIN klasy ON uczniowie.id_klasa=klasy.id
-        # ~GROUP BY klasa
-        # ~ORDER BY srednia DESC
-        
-        # ~SELECT imie,nazwisko, AVG(ocena), klasa AS srednia FROM uczniowie
-        # ~INNER JOIN oceny ON uczniowie.id=oceny.id_uczen
-        # ~INNER JOIN klasy ON uczniowie.id_klasa=klasy.id
-        # ~GROUP BY klasa
-        
-        # ZLICZANIE OSÓB Z TAKĄ ŚREDNIĄ 
-        # ~WITH srednie AS (
-            # ~SELECT imie,nazwisko, AVG(ocena) AS srednia FROM uczniowie
-            # ~INNER JOIN oceny ON uczniowie.id=oceny.id_uczen
-            # ~GROUP BY id_uczen
-        # ~) SELECT COUNT(imie) FROM srednie
-          # ~WHERE srednia > 3.8
-        
-        # WYBIERANIE Z TABELI ŚREDNIEJ POWYŻEJ...
-        # ~WITH srednie AS (
-            # ~SELECT imie,nazwisko, AVG(ocena) AS srednia FROM uczniowie
-            # ~INNER JOIN oceny ON uczniowie.id=oceny.id_uczen
-            # ~GROUP BY id_uczen
-        # ~) SELECT imie, nazwisko, srednia FROM srednie
-          # ~WHERE srednia > 3.8
-        
-        
-        # group by i where nie można stosowac razem ! 
-        
-        
-        # 10 NAJLEPSZYCH UCZNIÓW, GDZY 10 NAJGORSZYCH ZAMIAST DESC - ASC
-        # ~SELECT imie,nazwisko, AVG(ocena) AS srednia FROM uczniowie
-        # ~INNER JOIN oceny ON uczniowie.id=oceny.id_uczen
-        # ~GROUP BY id_uczen
-        # ~ORDER BY srednia DESC
-        # ~LIMIT 10 
-        
-        # SORTOWANIE WZGLĘDEM JAKIEGOŚ POLA
-        # ~SELECT klasa, nazwisko FROM klasy
-        # ~INNER JOIN uczniowie
-        # ~ON klasy.id=uczniowie.id_klasa
-        # ~ORDER BY klasa ASC
-    
-        # UCZNIOWIE KLASY 
-        # ~SELECT klasa, nazwisko, imie FROM klasy
-        # ~INNER JOIN uczniowie
-        # ~ON klasy.id=uczniowie.id_klasa
-        # ~WHERE klasa='1A'
-        
-        # oceny z przedmiotu
-        # ~SELECT nazwisko, imie1, pol FROM nazwiska
-        # ~INNER JOIN oceny
-        # ~ON nazwiska.nr_ucznia=oceny.nr_ucznia
 
-        
-        #SELECT nazwisko, imie1, dzien, miesiac, rok FROM nazwiska
-        #INNER JOIN dane_osobowe ON nazwiska.nr_ucznia=dane_osobowe.nr_ucznia
-        #WHERE nazwiska.nr_ucznia=9201
-        
-        # Kwerenda wyświetla numer ucznia
-        
-        # ~SELECT nazwisko, imie1, dzien, miesiac, rok FROM nazwiska
-        # ~INNER JOIN dane_osobowe 
-        # ~ON nazwiska.nr_ucznia=dane_osobowe.nr_ucznia
-        # ~WHERE nazwiska.nr_ucznia=
-        # ~(SELECT nr_ucznia FROM nazwiska WHERE nazwisko= "Gryczon" AND imie1= "Agata")
-        
+
 def main(args):
-    ### KONFIGURACJA ###
-    baza_nazwa = 'uczniowie'
-    tabele = ['uczniowie', 'klasy', 'przedmioty', 'oceny']
-    roz = '.csv'
-    naglowki = True
-    ####################
-    
-    con = sqlite3.connect(baza_nazwa + '.db')
-    cur = con.cursor()  # obiekt tzw. kursora
-    
+    # KONFIGURACJA #####################
+    baza = 'uczniowie'
+    roz = '.txt'
+    naglowki = True  # czy pliki ĹşrĂłdĹowe zawierajÄ nagĹĂłwki?
+    ####################################
+    con = sqlite3.connect(baza + '.db')  # poĹÄczenie
+    cur = con.cursor()  # obiekt kursora
+
     kwerenda1(cur)
-    
+
     con.commit()
     con.close()
     return 0

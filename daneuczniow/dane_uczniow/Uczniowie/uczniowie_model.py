@@ -1,5 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from peewee import *
-
 
 baza_plik = 'test_orm.db'
 baza = SqliteDatabase(baza_plik)  # instancja wykorzystywanej bazy
