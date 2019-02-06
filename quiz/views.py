@@ -97,6 +97,18 @@ def edytuj(pid):
     form.kategoria.choices = [(k.id, k.kategoria) for k in Kategoria.select()]
     form.kategoria.data = p.kategoria.id
     
+    if form.validate_on_submit():
+        p.pytanie = form.pytanie.data
+        p.kategoria = form.kategoria.data
+        p.save()
+        for o in form.odpowiedzi.data:
+            odp = Odpowiedz.get_by_id(o['id'])
+            odp.odpowiedz=o['odpowiedz']
+            odp.odpok=int(o['odpok'])
+            odp.save()
+        flash("Zaktualizowano pytanie: {}".format(form.pytanie.data))
+        redirect(url_for('lista'))
+    
     odpowiedzi = []
     for o in Odpowiedz.select().where(Odpowiedz.pytanie == p.id).dicts():
         odpowiedzi.append(o)

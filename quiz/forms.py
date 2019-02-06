@@ -15,7 +15,7 @@ class OdpForm(FlaskForm):
     odpowiedz = StringField('Odpowiedź:',
                              validators=[Required(message=blad1)],
                              render_kw={'class':'form-control'})
-    odpok = BooleanField('Poprawna:')
+    odpok = BooleanField()
 
 class DodajForm(FlaskForm):
     id = HiddenField('Pytanie id')
